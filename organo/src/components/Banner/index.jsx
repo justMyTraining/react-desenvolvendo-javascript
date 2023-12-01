@@ -6,7 +6,7 @@ function Banner() {
     <>
       <section className="banner-container">
         <div className="container d-flex justify-content-center">
-          <img src={imageBanner} alt="banner" />
+          <img className="w-100" src={imageBanner} alt="banner" />
         </div>
       </section>
     </>

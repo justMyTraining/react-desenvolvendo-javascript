@@ -1,11 +1,7 @@
+import Index from "./components/Index";
 
 function App() {
-  return (
-    <>
-      <p>Olá</p>
-      <p>Mundo</p>
-    </>
-  );
+  return <Index />;
 }
 
 export default App;

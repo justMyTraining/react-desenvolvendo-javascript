@@ -6,6 +6,9 @@ function Form() {
     <>
       <section className="container my-4 py-5">
         <form className="form">
+          <fieldset className="mb-5">
+            <h2>Preencha os dados para criar o card do colaborador.</h2>
+          </fieldset>
           <fieldset className="d-flex flex-column gap-4">
             <Input label="Nome" placeholder="Digite seu nome" />
             <Input label="Cargo" placeholder="Digite seu Cargo" />

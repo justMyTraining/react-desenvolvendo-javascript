@@ -4,7 +4,7 @@ import Input from "../Input";
 import Select from "../Select/Index";
 import "./Form.css";
 
-function Form() {
+function Form(props) {
   const [name, setName] = useState("");
   const [position, setPosition] = useState("");
   const [image, setImage] = useState("");
@@ -22,11 +22,7 @@ function Form() {
 
   const formSubmit = (event) => {
     event.preventDefault();
-    console.log(`Formulário submetido!`);
-    console.log(`Nome: ${name}`);
-    console.log(`Cargo: ${position}`);
-    console.log(`Imagen: ${image}`);
-    console.log(`Opção: ${option}`);
+    props.addNewCollaborator({ name, position, image, option });
   };
 
   return (

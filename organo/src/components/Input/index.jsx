@@ -1,6 +1,11 @@
+import { useState } from "react";
 import "./Input.css";
 
 function Input(props) {
+  const updateInputValue = (e) => {
+    props.updateValue(e.target.value);
+  };
+
   return (
     <>
       <div className="input-container">
@@ -8,10 +13,13 @@ function Input(props) {
           {props.label}
         </label>
         <input
-          id={props.label}
           className="w-100"
-          type="text"
+          id={props.label}
+          onChange={updateInputValue}
           placeholder={props.placeholder}
+          required={props.required}
+          type="text"
+          value={props.value}
         />
       </div>
     </>

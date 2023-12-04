@@ -1,0 +1,10 @@
+.CollaboratorsContainer {
+  background-color: #00c86f26;
+}
+.CollaboratorsContainer h2 {
+  color: #212121;
+  font-family: Prata;
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+}

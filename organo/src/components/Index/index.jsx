@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Banner from "../Banner";
 import Form from "../Form";
+import CollaboratorsContainer from "../CollaboratorsContainer/Index";
+import CollaboratorsCard from "../CollaboratorsCard/Index";
 
 function Index() {
   const [collaborators, setCollaborators] = useState([]);
@@ -17,6 +19,9 @@ function Index() {
       </header>
       <main>
         <Form addNewCollaborator={(e) => updateCollaboratorsArray(e)} />
+        <CollaboratorsContainer>
+          <CollaboratorsCard />
+        </CollaboratorsContainer>
       </main>
     </>
   );

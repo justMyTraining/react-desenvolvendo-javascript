@@ -6,6 +6,45 @@ import CollaboratorsCard from "../CollaboratorsCard/Index";
 
 function Index() {
   const [collaborators, setCollaborators] = useState([]);
+
+  const formOptions = [
+    {
+      team: "Programação",
+      colorPrimary: "#D9F7E9",
+      ColorSecondary: "#57C278",
+    },
+    {
+      team: "Front-End",
+      colorPrimary: "#E8F8FF",
+      ColorSecondary: "#82CFFA",
+    },
+    {
+      team: "Data Science",
+      colorPrimary: "#F0F8E2",
+      ColorSecondary: "#A6D157",
+    },
+    {
+      team: "Devops",
+      colorPrimary: "#FDE7E8",
+      ColorSecondary: "#E06B69",
+    },
+    {
+      team: "Ux e Design",
+      colorPrimary: "#FAE9F5",
+      ColorSecondary: "#DB6EBF",
+    },
+    {
+      team: "Mobile",
+      colorPrimary: "#FFF5D9",
+      ColorSecondary: "#FFBA05",
+    },
+    {
+      team: "Inovação e Gestão",
+      colorPrimary: "#FFEEDF",
+      ColorSecondary: "#FF8A29",
+    },
+  ];
+
   const updateCollaboratorsArray = (collaborator) => {
     setCollaborators([...collaborators, collaborator]);
   };
@@ -19,9 +58,7 @@ function Index() {
       </header>
       <main>
         <Form addNewCollaborator={(e) => updateCollaboratorsArray(e)} />
-        <CollaboratorsContainer>
-          <CollaboratorsCard />
-        </CollaboratorsContainer>
+        <CollaboratorsContainer teams={formOptions} />
       </main>
     </>
   );

@@ -10,7 +10,7 @@ function Form(props) {
   const [image, setImage] = useState("");
   const [option, setOption] = useState("");
 
-  const formOptions = [
+  const teams = [
     "Programação",
     "Front-End",
     "Data Science",
@@ -58,7 +58,7 @@ function Form(props) {
             />
             <Select
               label="Time"
-              options={formOptions}
+              options={teams}
               required
               updateValue={(e) => setOption(e)}
               value={option}

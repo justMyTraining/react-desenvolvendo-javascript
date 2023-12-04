@@ -7,6 +7,7 @@ function CollaboratorsContainer(props) {
       {props.teams.map((team) => (
         <section
           className="CollaboratorsContainer pt-4 pb-5"
+          key={team.team}
           style={{ backgroundColor: team.colorPrimary }}
         >
           <div className="container">

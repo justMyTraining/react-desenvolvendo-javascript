@@ -7,7 +7,7 @@ import CollaboratorsCard from "../CollaboratorsCard/Index";
 function Index() {
   const [collaborators, setCollaborators] = useState([]);
 
-  const formOptions = [
+  const teamsAndColors = [
     {
       team: "Programação",
       colorPrimary: "#D9F7E9",
@@ -57,8 +57,11 @@ function Index() {
         <Banner />
       </header>
       <main>
-        <Form addNewCollaborator={(e) => updateCollaboratorsArray(e)} />
-        <CollaboratorsContainer teams={formOptions} />
+        <Form
+          addNewCollaborator={(e) => updateCollaboratorsArray(e)}
+          teams={teamsAndColors.map((teams) => teams.team)}
+        />
+        <CollaboratorsContainer teams={teamsAndColors} />
       </main>
     </>
   );

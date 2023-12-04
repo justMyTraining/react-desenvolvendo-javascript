@@ -10,16 +10,6 @@ function Form(props) {
   const [image, setImage] = useState("");
   const [option, setOption] = useState("");
 
-  const teams = [
-    "Programação",
-    "Front-End",
-    "Data Science",
-    "Devops",
-    "Ux e Design",
-    "Mobile",
-    "Inovação e Gestão",
-  ];
-
   const formSubmit = (event) => {
     event.preventDefault();
     props.addNewCollaborator({ name, position, image, option });
@@ -58,7 +48,7 @@ function Form(props) {
             />
             <Select
               label="Time"
-              options={teams}
+              options={props.teams}
               required
               updateValue={(e) => setOption(e)}
               value={option}

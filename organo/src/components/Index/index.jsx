@@ -11,37 +11,37 @@ function Index() {
     {
       team: "Programação",
       colorPrimary: "#D9F7E9",
-      ColorSecondary: "#57C278",
+      colorSecondary: "#57C278",
     },
     {
       team: "Front-End",
       colorPrimary: "#E8F8FF",
-      ColorSecondary: "#82CFFA",
+      colorSecondary: "#82CFFA",
     },
     {
       team: "Data Science",
       colorPrimary: "#F0F8E2",
-      ColorSecondary: "#A6D157",
+      colorSecondary: "#A6D157",
     },
     {
       team: "Devops",
       colorPrimary: "#FDE7E8",
-      ColorSecondary: "#E06B69",
+      colorSecondary: "#E06B69",
     },
     {
       team: "Ux e Design",
       colorPrimary: "#FAE9F5",
-      ColorSecondary: "#DB6EBF",
+      colorSecondary: "#DB6EBF",
     },
     {
       team: "Mobile",
       colorPrimary: "#FFF5D9",
-      ColorSecondary: "#FFBA05",
+      colorSecondary: "#FFBA05",
     },
     {
       team: "Inovação e Gestão",
       colorPrimary: "#FFEEDF",
-      ColorSecondary: "#FF8A29",
+      colorSecondary: "#FF8A29",
     },
   ];
 
@@ -61,7 +61,17 @@ function Index() {
           addNewCollaborator={(e) => updateCollaboratorsArray(e)}
           teams={teamsAndColors.map((teams) => teams.team)}
         />
-        <CollaboratorsContainer teams={teamsAndColors} />
+        {teamsAndColors.map((teams) => (
+          <CollaboratorsContainer
+            collaborators={collaborators.filter(
+              (collaborator) => collaborator.team === teams.team
+            )}
+            colorPrimary={teams.colorPrimary}
+            colorSecondary={teams.colorSecondary}
+            key={teams.team}
+            team={teams.team}
+          />
+        ))}
       </main>
     </>
   );

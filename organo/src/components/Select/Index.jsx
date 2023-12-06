@@ -12,8 +12,8 @@ function Select(props) {
           required={props.required}
           value={props.value}
         >
-          {props.options.map((option) => (
-            <option key={option}>{option}</option>
+          {props.teams.map((team) => (
+            <option key={team}>{team}</option>
           ))}
         </select>
       </div>

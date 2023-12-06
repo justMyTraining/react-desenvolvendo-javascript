@@ -8,11 +8,11 @@ function Form(props) {
   const [name, setName] = useState("");
   const [position, setPosition] = useState("");
   const [image, setImage] = useState("");
-  const [option, setOption] = useState("");
+  const [team, setTeam] = useState(props.teams[0]);
 
   const formSubmit = (event) => {
     event.preventDefault();
-    props.addNewCollaborator({ name, position, image, option });
+    props.addNewCollaborator({ name, position, image, team });
   };
 
   return (
@@ -48,10 +48,10 @@ function Form(props) {
             />
             <Select
               label="Time"
-              options={props.teams}
+              teams={props.teams}
               required
-              updateValue={(e) => setOption(e)}
-              value={option}
+              updateValue={(e) => setTeam(e)}
+              value={team}
             />
           </fieldset>
           <fieldset>

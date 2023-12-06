@@ -3,7 +3,13 @@ import "./CollaboratorsCard.css";
 function CollaboratorsCard(props) {
   return (
     <>
-      <li className="CollaboratorsCard" key={props.name}>
+      <li
+        className="CollaboratorsCard"
+        key={props.name}
+        style={{
+          backgroundImage: `linear-gradient(${props.colorSecondary} 30%, white 30%)`,
+        }}
+      >
         <div className="text-center mb-3">
           <img
             className="w-100 rounded-circle px-5"

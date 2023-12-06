@@ -15,9 +15,10 @@ function CollaboratorsContainer(props) {
                 {props.team}
               </h2>
             </div>
-            <ul className="list-unstyled">
+            <ul className="list-unstyled d-flex justify-content-center gap-4 flex-wrap">
               {props.collaborators.map((collaborator, index) => (
                 <CollaboratorsCard
+                  colorSecondary={props.colorSecondary}
                   image={collaborator.image}
                   key={index}
                   name={collaborator.name}

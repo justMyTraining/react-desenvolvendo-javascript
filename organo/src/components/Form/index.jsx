@@ -8,11 +8,15 @@ function Form(props) {
   const [name, setName] = useState("");
   const [position, setPosition] = useState("");
   const [image, setImage] = useState("");
-  const [team, setTeam] = useState(props.teams[0]);
+  const [team, setTeam] = useState("");
 
   const formSubmit = (event) => {
     event.preventDefault();
     props.addNewCollaborator({ name, position, image, team });
+    setName("");
+    setPosition("");
+    setImage("");
+    setTeam("");
   };
 
   return (

@@ -12,8 +12,14 @@ function Select(props) {
           required={props.required}
           value={props.value}
         >
+          <option value="" selected disabled>
+            Selecione uma opção
+          </option>
+
           {props.teams.map((team) => (
-            <option key={team}>{team}</option>
+            <option value={team.team} key={team}>
+              {team}
+            </option>
           ))}
         </select>
       </div>

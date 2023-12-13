@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Banner from "../Banner";
 import Form from "../Form";
 import CollaboratorsContainer from "../CollaboratorsContainer/Index";
-import CollaboratorsCard from "../CollaboratorsCard/Index";
 
 function Index() {
   const [collaborators, setCollaborators] = useState([]);
@@ -48,9 +47,7 @@ function Index() {
   const updateCollaboratorsArray = (collaborator) => {
     setCollaborators([...collaborators, collaborator]);
   };
-  useEffect(() => {
-    console.log(collaborators); // O estado foi atualizado aqui
-  }, [collaborators]);
+
   return (
     <>
       <header>

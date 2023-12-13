@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Banner from "../Banner";
 import Form from "../Form";
 import CollaboratorsContainer from "../CollaboratorsContainer/Index";
+import BannerFooter from "../BannerFooter/Index";
 
 function Index() {
   const [collaborators, setCollaborators] = useState([]);
@@ -70,6 +71,9 @@ function Index() {
           />
         ))}
       </main>
+      <footer>
+        <BannerFooter />
+      </footer>
     </>
   );
 }
